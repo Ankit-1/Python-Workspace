@@ -1,0 +1,59 @@
+import mysql.connector
+from mysql.connector import Error
+
+try:
+    connection = mysql.connector.connect(host='localhost',
+                                         database='result',
+                                         user='root',
+                                         password='!NT#L_W!NZ')
+
+    sql_select_Query = "select * from finalcleandata_dec2017sem1"
+    cursor = connection.cursor()
+    cursor.execute(sql_select_Query)
+    records = cursor.fetchall()
+    print("Total number of rows in finalcleandata_dec2017sem1 is: ", cursor.rowcount)
+    
+    print("\nPrinting each finalcleandata_dec2017sem1 record")
+    for row in records:
+#         print("Name = ", row[0])
+#         print("Enrollment Number = ", row[1],"\n" )
+        name= row[0];
+        roll_no = row[1];
+        sub1=row[2];
+        sub2=row[3];
+        sub3=row[4];
+        sub4=row[5];
+        sub5=row[6];
+        sub6=row[7];
+        sub7=row[8];
+        sub8=row[9];
+        credits=row[10];
+        print(name)
+        print(roll_no)
+        print(sub1)
+        print(sub2)
+        print(sub3)
+        print(sub4)
+        print(sub5)
+        print(sub6)
+        print(sub7)
+        print(sub8)
+        print(credits)
+#         print("20201 = ", row[2])
+#         print("20203 =", row[3])
+#         print("20205 =", row[4])
+#         print("20205 =", row[5])
+#         print("20205 =", row[6])
+#         print("20205 =", row[7])
+#         print("20205 =", row[8])
+#         print("20205 =", row[9])
+#         print("cs =", row[10], "\n")
+#         cursor.close()
+
+except Error as e:
+    print("Error reading data from MySQL table", e)
+finally:
+    if (connection.is_connected()):
+        connection.close()
+        cursor.close()
+        print("MySQL connection is closed")

@@ -1,0 +1,53 @@
+-- VERSION_5
+-- START DISKCACHE_2
+C:\Users\TheBOT\Python Workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\First_project\com.python.pydev.analysis\v2_indexcache
+Dictionary|1560856282139555000|C:\Users\TheBOT\workspace\First_project\Dictionary.py
+input|1560859676581027000|C:\Users\TheBOT\workspace\First_project\input.py
+deletemodul.creating|1561803165220834000|C:\Users\TheBOT\workspace\First_project\deletemodul\creating.py
+file|1560772962650222000|C:\Users\TheBOT\workspace\First_project\file.py
+deletemodul.module|1561803594860329000|C:\Users\TheBOT\workspace\First_project\deletemodul\module.py
+is_isnot|1560850574057126000|C:\Users\TheBOT\workspace\First_project\is_isnot.py
+python_funtions|1561377563294525000|C:\Users\TheBOT\workspace\First_project\python_funtions.py
+in_notin|1560850156197114000|C:\Users\TheBOT\workspace\First_project\in_notin.py
+file1|1571769725021545000|C:\Users\TheBOT\workspace\First_project\file1.py
+-- END DISKCACHE
+-- START DICTIONARY
+18
+10=Dictionary
+13=C:\Users\TheBOT\workspace\First_project\file1.py
+11=C:\Users\TheBOT\workspace\First_project\deletemodul\creating.py
+12=deletemodul.creating
+9=C:\Users\TheBOT\workspace\First_project\Dictionary.py
+3=C:\Users\TheBOT\workspace\First_project\is_isnot.py
+5=C:\Users\TheBOT\workspace\First_project\in_notin.py
+17=C:\Users\TheBOT\workspace\First_project\python_funtions.py
+7=C:\Users\TheBOT\workspace\First_project\input.py
+8=input
+2=file
+4=is_isnot
+15=C:\Users\TheBOT\workspace\First_project\deletemodul\module.py
+16=deletemodul.module
+18=python_funtions
+6=in_notin
+14=file1
+1=C:\Users\TheBOT\workspace\First_project\file.py
+-- END DICTIONARY
+-- START TREE 1
+13
+a|5|a!1^1#1*19@a!3^1#1*35@a!5^1#1*51@a!7^13#1*67@a!9^6#1*83@
+b|5|b!9^7#1*83@b!1^5#1*19@b!5^2#1*51@b!7^14#1*67@b!3^2#1*35@
+c|2|c!11^11#1*99@c!1^11#1*19@
+cgp|1|CGPA!13^44#5*115@
+con|2|conn!11^2#1*99@conn!15^2#1*131@
+cur|2|cursor!11^3#1*99@cursor!15^3#1*131@
+d|1|d!15^16#1*131@
+del|1|delete!15^11#5*130@
+dis|1|display!17^18#5*146@
+fun|1|function1!13^13#5*114@
+lis|1|list!5^3#1*51@
+m|1|m!9^37#1*83@
+mar|1|marks!13^2#1*115@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

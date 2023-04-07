@@ -1,0 +1,153 @@
+1.' TO FIND AND REPLACE
+
+Sub FindReplaceAll()
+'PURPOSE: Find & Replace text/values throughout a specific sheet
+
+
+Dim sht As Worksheet
+Dim fnd As Variant
+Dim rplc As Variant
+
+fnd = "(O)"
+rplc = ""
+
+'Store a specfic sheet to a variable
+  Set sht = Sheets("Sheet1")
+
+'Perform the Find/Replace All
+  sht.Cells.Replace what:=fnd, Replacement:=rplc, _
+    LookAt:=xlPart, SearchOrder:=xlByRows, MatchCase:=False, _
+    SearchFormat:=False, ReplaceFormat:=False
+
+End Sub
+
+2.'Delete row based on specified cell value.
+
+Sub Delete_Rows_Based_On_Value()
+'Apply a filter to a Range and delete visible rows
+
+
+Dim ws As Worksheet
+
+  'Set reference to the sheet in the workbook.
+  Set ws = ThisWorkbook.Worksheets("Regular Range")
+  ws.Activate 'not required but allows user to view sheet if warning message appears
+  
+  'Clear any existing filters
+  On Error Resume Next
+    ws.ShowAllData
+  On Error GoTo 0
+
+  '1. Apply Filter
+  ws.Range("B3:G1000").AutoFilter Field:=4, Criteria1:=""
+  
+  '2. Delete Rows
+  Application.DisplayAlerts = False
+    ws.Range("B4:G1000").SpecialCells(xlCellTypeVisible).Delete
+  Application.DisplayAlerts = True
+  
+  '3. Clear Filter
+  On Error Resume Next
+    ws.ShowAllData
+  On Error GoTo 0
+
+End Sub
+
+3.'Deleting Rows Based on Multiple Criteria
+
+
+Sub Delete_Rows_Based_On_Multiple_Values()
+'Apply a filter to a Table and delete visible rows
+
+Dim lo As ListObject
+
+  'Set reference to the sheet and Table.
+  Set lo = Sheet5.ListObjects(1)
+  lo.Parent.Activate 'Activate sheet that Table is on.
+  
+  'Clear any existing filters
+  lo.AutoFilter.ShowAllData
+  
+  '1. Apply Filter - Blanks in Product for before 2015 only
+  lo.Range.AutoFilter Field:=4, Criteria1:=""
+  lo.Range.AutoFilter Field:=1, Criteria1:="<1/1/2015"
+  
+  '2. Delete Rows
+  Application.DisplayAlerts = False
+    lo.DataBodyRange.SpecialCells(xlCellTypeVisible).Delete
+  Application.DisplayAlerts = True
+
+  '3. Clear Filter
+  lo.AutoFilter.ShowAllData
+
+End Sub
+
+4.'Delete Blank Rows.
+
+Sub remove_empty_lines()
+Dim start_time, arr(), rng, row_num As Long, column_num As Long, i, j
+    Application.ScreenUpdating = False
+    row_num = ActiveSheet.UsedRange.Rows.Count
+    column_num = ActiveSheet.UsedRange.Columns.Count
+    ReDim arr(1 To row_num)
+    rng = ActiveSheet.UsedRange
+    start_time = Timer
+    For i = 1 To row_num
+       For j = 1 To column_num
+        If rng(i, j) <> "" Then arr(i) = i
+     Next j, i
+    With Cells(ActiveSheet.UsedRange.Row, ActiveSheet.UsedRange.Column + column_num).Resize(row_num, 1)
+    .Value = WorksheetFunction.Transpose(arr)
+    ActiveSheet.UsedRange.Sort Key1:=Cells(ActiveSheet.UsedRange.Row, ActiveSheet.UsedRange.Column + column_num)
+    .Value = ""
+   End With
+    Application.ScreenUpdating = True
+    MsgBox Format(Timer - start_time, "0.00s")
+End Sub
+
+5. TO DELETE ROWS BASED ON CELL VALUE.
+
+Sub myDeleteRows()
+Dim MyCol As String
+Dim i As Integer
+For i = 1 To Range("A" & "65536").End(xlUp).Row Step 1
+If Application.WorksheetFunction.CountIf(Range("A" & i & ":AZ" & i), "Result Declared on: 26/07/2019") > 0 Or Application.WorksheetFunction.CountIf(Range("A" & i & ":AZ" & i), "LEGEND") > 0 Or Application.WorksheetFunction.CountIf(Range("A" & i & ":AZ" & i), "Charge") > 0 Then
+Range("A" & i).EntireRow.Delete
+End If
+Next i
+
+End Sub
+
+6.Partial 
+
+Sub CatDelete()
+    Dim rCell As Range
+    Dim cRow As Long, LastRow As Long
+    LastRow = Worksheets("Sheet1").Range("A" & Rows.Count).End(xlUp).Row
+    With Worksheets("Sheet1").Range("A1", Worksheets("Sheet1").Range("A" & Rows.Count).End(xlUp))
+        Do
+            Set c = .Find(What:="*Page No.:*", After:=[A1], LookIn:=xlValues, LookAt:=xlPart, SearchOrder:=xlByColumns _
+            , SearchDirection:=xlNext, MatchCase:=False, SearchFormat:=False)
+            If Not c Is Nothing Then
+                cRow = c.Row
+                c.EntireRow.Delete
+            End If
+         Loop While Not c Is Nothing And cRow < LastRow
+    End With
+End Sub
+
+7.TO REMOVE ALL GRADES
+
+Sub Replace_Example2()
+
+Range("A1:T13422").Replace What:="(O)", Replacement:=""
+Range("A1:T13422").Replace What:="(A+)", Replacement:=""
+Range("A1:T13422").Replace What:="(A)", Replacement:=""
+Range("A1:T13422").Replace What:="(B+)", Replacement:=""
+Range("A1:T13422").Replace What:="(B)", Replacement:=""
+Range("A1:T13422").Replace What:="(C)", Replacement:=""
+Range("A1:T13422").Replace What:="(D)", Replacement:=""
+Range("A1:T13422").Replace What:="(P)", Replacement:=""
+Range("A1:T13422").Replace What:="(F)", Replacement:=""
+
+End Sub

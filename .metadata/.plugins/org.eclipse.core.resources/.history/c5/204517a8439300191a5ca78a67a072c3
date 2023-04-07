@@ -1,0 +1,4 @@
+for friend in ["Vivek","Vivek","Vivek"]:
+    invitation="Hi",friend,"Please come to the party"
+    print(invitation)
+    

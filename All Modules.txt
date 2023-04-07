@@ -1,0 +1,229 @@
+Sub RemoveAllGrades()
+
+Range("A1:T13422").Replace What:="(O)", Replacement:=""
+Range("A1:T13422").Replace What:="(A+)", Replacement:=""
+Range("A1:T13422").Replace What:="(A)", Replacement:=""
+Range("A1:T13422").Replace What:="(B+)", Replacement:=""
+Range("A1:T13422").Replace What:="(B)", Replacement:=""
+Range("A1:T13422").Replace What:="(C)", Replacement:=""
+Range("A1:T13422").Replace What:="(D)", Replacement:=""
+Range("A1:T13422").Replace What:="(P)", Replacement:=""
+Range("A1:T13422").Replace What:="(F)", Replacement:=""
+
+End Sub
+
+Sub PageNo()
+    Dim rCell As Range
+    Dim cRow As Long, LastRow As Long
+    LastRow = Worksheets("Sheet1").Range("A" & Rows.Count).End(xlUp).Row
+    With Worksheets("Sheet1").Range("A1", Worksheets("Sheet1").Range("A" & Rows.Count).End(xlUp))
+        Do
+            Set c = .Find(What:="*Page No.:*", After:=[A1], LookIn:=xlValues, LookAt:=xlPart, SearchOrder:=xlByColumns _
+            , SearchDirection:=xlNext, MatchCase:=False, SearchFormat:=False)
+            If Not c Is Nothing Then
+                cRow = c.Row
+                c.EntireRow.Delete
+            End If
+         Loop While Not c Is Nothing And cRow < LastRow
+    End With
+End Sub
+
+Sub ResultPrepared()
+    Dim rCell As Range
+    Dim cRow As Long, LastRow As Long
+    LastRow = Worksheets("Sheet1").Range("A" & Rows.Count).End(xlUp).Row
+    With Worksheets("Sheet1").Range("A1", Worksheets("Sheet1").Range("A" & Rows.Count).End(xlUp))
+        Do
+            Set c = .Find(What:="*Result Prepared on*", After:=[A1], LookIn:=xlValues, LookAt:=xlPart, SearchOrder:=xlByColumns _
+            , SearchDirection:=xlNext, MatchCase:=False, SearchFormat:=False)
+            If Not c Is Nothing Then
+                cRow = c.Row
+                c.EntireRow.Delete
+            End If
+         Loop While Not c Is Nothing And cRow < LastRow
+    End With
+End Sub
+
+Sub ResultDeclared()
+    Dim rCell As Range
+    Dim cRow As Long, LastRow As Long
+    LastRow = Worksheets("Sheet1").Range("A" & Rows.Count).End(xlUp).Row
+    With Worksheets("Sheet1").Range("A1", Worksheets("Sheet1").Range("A" & Rows.Count).End(xlUp))
+        Do
+            Set c = .Find(What:="*Result Declared on*", After:=[A1], LookIn:=xlValues, LookAt:=xlPart, SearchOrder:=xlByColumns _
+            , SearchDirection:=xlNext, MatchCase:=False, SearchFormat:=False)
+            If Not c Is Nothing Then
+                cRow = c.Row
+                c.EntireRow.Delete
+            End If
+         Loop While Not c Is Nothing And cRow < LastRow
+    End With
+End Sub
+
+Sub SID()
+    Dim rCell As Range
+    Dim cRow As Long, LastRow As Long
+    LastRow = Worksheets("Sheet1").Range("C" & Rows.Count).End(xlUp).Row
+    With Worksheets("Sheet1").Range("C1", Worksheets("Sheet1").Range("C" & Rows.Count).End(xlUp))
+        Do
+            Set c = .Find(What:="*SID: 480000043126*", After:=[A1], LookIn:=xlValues, LookAt:=xlPart, SearchOrder:=xlByColumns _
+            , SearchDirection:=xlNext, MatchCase:=False, SearchFormat:=False)
+            If Not c Is Nothing Then
+                cRow = c.Row
+                c.EntireRow.Delete
+            End If
+         Loop While Not c Is Nothing And cRow < LastRow
+    End With
+End Sub
+
+Sub SchemeID()
+Dim MyCol As String
+Dim i As Integer
+For i = 1 To Range("C" & "65536").End(xlUp).Row Step 1
+If Application.WorksheetFunction.CountIf(Range("A" & i & ":AZ" & i), "SchemeID: 480202015001") > 0 Then
+Range("A" & i).EntireRow.Delete
+End If
+Next i
+
+End Sub
+
+Sub myDeleteRows1()
+Dim MyCol As String
+Dim i As Integer
+For i = 1 To Range("A" & "65536").End(xlUp).Row Step 1
+If Application.WorksheetFunction.CountIf(Range("A" & i & ":AZ" & i), "LEGEND") > 0 Or Application.WorksheetFunction.CountIf(Range("A" & i & ":AZ" & i), "Internal") > 0 Or Application.WorksheetFunction.CountIf(Range("A" & i & ":AZ" & i), "PAPERID(CREDITS)") > 0 Then
+Range("A" & i).EntireRow.Delete
+End If
+Next i
+
+End Sub
+
+
+
+Sub myDeleteRows2()
+Dim MyCol As String
+Dim i As Integer
+For i = 1 To Range("A" & "65536").End(xlUp).Row Step 1
+If Application.WorksheetFunction.CountIf(Range("A" & i & ":AZ" & i), "TOTAL(GRADE)") > 0 Or Application.WorksheetFunction.CountIf(Range("A" & i & ":AZ" & i), "A: Absent") > 0 Or Application.WorksheetFunction.CountIf(Range("A" & i & ":AZ" & i), "D: Detained") > 0 Then
+Range("A" & i).EntireRow.Delete
+End If
+Next i
+
+End Sub
+
+
+Sub myDeleteRows3()
+Dim MyCol As String
+Dim i As Integer
+For i = 1 To Range("A" & "65536").End(xlUp).Row Step 1
+If Application.WorksheetFunction.CountIf(Range("A" & i & ":AZ" & i), "CS: Credits Secured") > 0 Or Application.WorksheetFunction.CountIf(Range("A" & i & ":AZ" & i), "AP: Already Passed") > 0 Or Application.WorksheetFunction.CountIf(Range("A" & i & ":AZ" & i), "Result of Programme Code: 020") > 0 Then
+Range("A" & i).EntireRow.Delete
+End If
+Next i
+
+End Sub
+
+Sub myDeleteRows4()
+Dim MyCol As String
+Dim i As Integer
+For i = 1 To Range("A" & "65536").End(xlUp).Row Step 1
+If Application.WorksheetFunction.CountIf(Range("A" & i & ":AZ" & i), "RESULT TABULATION SHEET") > 0 Then
+Range("A" & i).EntireRow.Delete
+End If
+Next i
+
+End Sub
+
+Sub remove_empty_lines()
+Dim start_time, arr(), rng, row_num As Long, column_num As Long, i, j
+    Application.ScreenUpdating = False
+    row_num = ActiveSheet.UsedRange.Rows.Count
+    column_num = ActiveSheet.UsedRange.Columns.Count
+    ReDim arr(1 To row_num)
+    rng = ActiveSheet.UsedRange
+    start_time = Timer
+    For i = 1 To row_num
+       For j = 1 To column_num
+        If rng(i, j) <> "" Then arr(i) = i
+     Next j, i
+    With Cells(ActiveSheet.UsedRange.Row, ActiveSheet.UsedRange.Column + column_num).Resize(row_num, 1)
+    .Value = WorksheetFunction.Transpose(arr)
+    ActiveSheet.UsedRange.Sort Key1:=Cells(ActiveSheet.UsedRange.Row, ActiveSheet.UsedRange.Column + column_num)
+    .Value = ""
+   End With
+    Application.ScreenUpdating = True
+    MsgBox Format(Timer - start_time, "0.00s")
+End Sub
+
+Public Sub DeleteEmptyColumns()
+    Dim SourceRange As Range
+    Dim EntireColumn As Range
+ 
+    On Error Resume Next
+ 
+    Set SourceRange = Application.InputBox( _
+        "Select a range:", "Delete Empty Columns", _
+        Application.Selection.Address, Type:=8)
+ 
+    If Not (SourceRange Is Nothing) Then
+        Application.ScreenUpdating = False
+ 
+        For i = SourceRange.Columns.Count To 1 Step -1
+            Set EntireColumn = SourceRange.Cells(1, i).EntireColumn
+            If Application.WorksheetFunction.CountA(EntireColumn) = 0 Then
+                EntireColumn.Delete
+            End If
+        Next
+ 
+        Application.ScreenUpdating = True
+    End If
+End Sub
+
+
+Sub datepdfmade()
+    Dim rCell As Range
+    Dim cRow As Long, LastRow As Long
+    LastRow = Worksheets("Sheet1").Range("A" & Rows.Count).End(xlUp).Row
+    With Worksheets("Sheet1").Range("A1", Worksheets("Sheet1").Range("A" & Rows.Count).End(xlUp))
+        Do
+            Set c = .Find(What:="*Date on which pdf made*", After:=[A1], LookIn:=xlValues, LookAt:=xlPart, SearchOrder:=xlByColumns _
+            , SearchDirection:=xlNext, MatchCase:=False, SearchFormat:=False)
+            If Not c Is Nothing Then
+                cRow = c.Row
+                c.EntireRow.Delete
+            End If
+         Loop While Not c Is Nothing And cRow < LastRow
+    End With
+End Sub
+
+Sub SIDStudentID()
+    Dim rCell As Range
+    Dim cRow As Long, LastRow As Long
+    LastRow = Worksheets("Sheet1").Range("A" & Rows.Count).End(xlUp).Row
+    With Worksheets("Sheet1").Range("A1", Worksheets("Sheet1").Range("A" & Rows.Count).End(xlUp))
+        Do
+            Set c = .Find(What:="*SID: Student ID*", After:=[A1], LookIn:=xlValues, LookAt:=xlPart, SearchOrder:=xlByColumns _
+            , SearchDirection:=xlNext, MatchCase:=False, SearchFormat:=False)
+            If Not c Is Nothing Then
+                cRow = c.Row
+                c.EntireRow.Delete
+            End If
+         Loop While Not c Is Nothing And cRow < LastRow
+    End With
+End Sub
+
+Sub PassedwithGraceMarks()
+    Dim rCell As Range
+    Dim cRow As Long, LastRow As Long
+    LastRow = Worksheets("Sheet1").Range("A" & Rows.Count).End(xlUp).Row
+    With Worksheets("Sheet1").Range("A1", Worksheets("Sheet1").Range("A" & Rows.Count).End(xlUp))
+        Do
+            Set c = .Find(What:="*Passed with Grace Marks*", After:=[A1], LookIn:=xlValues, LookAt:=xlPart, SearchOrder:=xlByColumns _
+            , SearchDirection:=xlNext, MatchCase:=False, SearchFormat:=False)
+            If Not c Is Nothing Then
+                cRow = c.Row
+                c.EntireRow.Delete
+            End If
+         Loop While Not c Is Nothing And cRow < LastRow
+    End With
+End Sub

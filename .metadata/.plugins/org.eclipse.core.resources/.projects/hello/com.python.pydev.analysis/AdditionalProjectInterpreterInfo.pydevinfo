@@ -1,0 +1,124 @@
+-- VERSION_5
+-- START DISKCACHE_2
+C:\Users\TheBOT\Python Workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\hello\com.python.pydev.analysis\v2_indexcache
+string_functions|1560945350565392000|C:\Users\TheBOT\Python Workspace\hello\string_functions.py
+hi|1560939918042949000|C:\Users\TheBOT\Python Workspace\hello\hi.py
+database1.insert|1561635387490969000|C:\Users\TheBOT\Python Workspace\hello\database1\insert.py
+import|1560940150641206000|C:\Users\TheBOT\Python Workspace\hello\import.py
+newfolder.example|1561461975951219000|C:\Users\TheBOT\Python Workspace\hello\newfolder\example.py
+importcv2|1562062704208434000|C:\Users\TheBOT\Python Workspace\hello\importcv2.py
+database1.create_connection|1561635019794819000|C:\Users\TheBOT\Python Workspace\hello\database1\create_connection.py
+database1.delete|1561716362502850000|C:\Users\TheBOT\Python Workspace\hello\database1\delete.py
+random_package|1560942648844432000|C:\Users\TheBOT\Python Workspace\hello\random_package.py
+whileloop|1561029610270529000|C:\Users\TheBOT\Python Workspace\hello\whileloop.py
+newfolder.example2|1561461946392244000|C:\Users\TheBOT\Python Workspace\hello\newfolder\example2.py
+database1.retreive|1561636041107955000|C:\Users\TheBOT\Python Workspace\hello\database1\retreive.py
+python_function2|1561372996686209000|C:\Users\TheBOT\Python Workspace\hello\python_function2.py
+newfolder.example1|1561463558700418000|C:\Users\TheBOT\Python Workspace\hello\newfolder\example1.py
+database1.search|1561636701628107000|C:\Users\TheBOT\Python Workspace\hello\database1\search.py
+ifelse_ex1|1561025427517921000|C:\Users\TheBOT\Python Workspace\hello\ifelse_ex1.py
+pass|1561032161592449000|C:\Users\TheBOT\Python Workspace\hello\pass.py
+calling_md|1561454311233539000|C:\Users\TheBOT\Python Workspace\hello\calling_md.py
+ifelse|1560946079091268000|C:\Users\TheBOT\Python Workspace\hello\ifelse.py
+Script.scripts_exe|1561630343726682000|C:\Users\TheBOT\Python Workspace\hello\Script\scripts_exe.py
+whileloop_ex|1561031568927668000|C:\Users\TheBOT\Python Workspace\hello\whileloop_ex.py
+forloop|1561027207474608000|C:\Users\TheBOT\Python Workspace\hello\forloop.py
+python_functions3|1561455177314975000|C:\Users\TheBOT\Python Workspace\hello\python_functions3.py
+problem_global_local|1561455177278205000|C:\Users\TheBOT\Python Workspace\hello\problem_global_local.py
+scripts_exe|1561627511368802000|C:\Users\TheBOT\Python Workspace\hello\scripts_exe.py
+iter_function|1561464697027522000|C:\Users\TheBOT\Python Workspace\hello\iter_function.py
+classes_python|1561580965158602000|C:\Users\TheBOT\Python Workspace\hello\classes_python.py
+-- END DISKCACHE
+-- START DICTIONARY
+51
+18=hi
+51=Person.__init__
+35=C:\Users\TheBOT\Python Workspace\hello\importcv2.py
+46=newfolder.example
+1=C:\Users\TheBOT\Python Workspace\hello\calling_md.py
+19=C:\Users\TheBOT\Python Workspace\hello\ifelse_ex1.py
+14=whileloop
+50=MyClass
+44=newfolder.example2
+30=database1.retreive
+24=newfolder.example1
+31=C:\Users\TheBOT\Python Workspace\hello\database1\insert.py
+3=C:\Users\TheBOT\Python Workspace\hello\forloop.py
+20=ifelse_ex1
+45=C:\Users\TheBOT\Python Workspace\hello\newfolder\example.py
+23=C:\Users\TheBOT\Python Workspace\hello\newfolder\example1.py
+47=C:\Users\TheBOT\Python Workspace\hello\classes_python.py
+13=C:\Users\TheBOT\Python Workspace\hello\whileloop.py
+2=calling_md
+38=ifelse
+12=Script.scripts_exe
+26=python_functions3
+21=C:\Users\TheBOT\Python Workspace\hello\python_function2.py
+40=problem_global_local
+49=Person
+48=classes_python
+32=database1.insert
+6=import
+36=importcv2
+43=C:\Users\TheBOT\Python Workspace\hello\newfolder\example2.py
+15=C:\Users\TheBOT\Python Workspace\hello\database1\delete.py
+34=database1.create_connection
+9=C:\Users\TheBOT\Python Workspace\hello\iter_function.py
+16=database1.delete
+42=random_package
+8=database1.search
+22=python_function2
+27=C:\Users\TheBOT\Python Workspace\hello\scripts_exe.py
+37=C:\Users\TheBOT\Python Workspace\hello\ifelse.py
+39=C:\Users\TheBOT\Python Workspace\hello\problem_global_local.py
+11=C:\Users\TheBOT\Python Workspace\hello\Script\scripts_exe.py
+41=C:\Users\TheBOT\Python Workspace\hello\random_package.py
+17=C:\Users\TheBOT\Python Workspace\hello\hi.py
+4=forloop
+7=C:\Users\TheBOT\Python Workspace\hello\database1\search.py
+29=C:\Users\TheBOT\Python Workspace\hello\database1\retreive.py
+33=C:\Users\TheBOT\Python Workspace\hello\database1\create_connection.py
+5=C:\Users\TheBOT\Python Workspace\hello\import.py
+25=C:\Users\TheBOT\Python Workspace\hello\python_functions3.py
+28=scripts_exe
+10=iter_function
+-- END DICTIONARY
+-- START TREE 1
+28
+a|12|a!1^6#1*19@a!3^8#1*35@a!5^5#1*51@a!7^7#1*67@a!9^2#1*83@a!11^47#1*99@a!13^3#1*115@a!15^7#1*131@a!17^25#1*147@a!19^4#5*163@a!21^13#1*179@a!23^2#5*195@
+are|3|area!25^1#5*210@area!11^2#5*98@area!27^2#5*226@
+b|1|b!17^26#1*147@
+c|1|c!29^14#1*243@
+ch|1|ch!9^1#1*83@
+che|3|check!11^49#5*98@check!25^46#5*210@check!27^47#5*226@
+con|5|conn!31^2#1*259@conn!15^2#1*131@conn!29^2#1*243@conn!7^2#1*67@conn!33^2#1*275@
+cou|1|course!31^4#1*259@
+cur|5|cursor!15^3#1*131@cursor!33^3#1*275@cursor!31^3#1*259@cursor!7^3#1*67@cursor!29^3#1*243@
+det|1|details!21^1#5*178@
+df|1|df!35^8#1*291@
+dic|1|dict!17^29#1*147@
+fac|1|fact!13^5#1*115@
+foo|1|food!37^1#1*307@
+g|3|g!25^44#1*211@g!27^45#1*227@g!11^45#1*99@
+glo|1|global_local!39^1#5*322@
+i|1|i!13^6#1*115@
+m|1|m!41^5#1*339@
+mai|2|main!43^1#5*354@main!45^1#5*370@
+myc|1|MyClass!47^1#7*385@
+n|2|n!41^3#1*339@n!3^6#1*35@
+p|1|p!47^4#1*387@
+p1|1|p1!47^15#1*387@
+p2|1|p2!47^18#1*387@
+per|1|Person!47^7#7*385@
+row|1|rows!7^11#1*67@
+s|0|
+wea|1|weather_data!35^7#1*291@
+-- END TREE
+-- START TREE 2
+5
+__i|1|__init__!49&47^8#9*386@
+a|1|a!50&47^2#5*387@
+age|1|age!51&47^10#9*387@
+myf|1|myfunction!49&47^11#9*386@
+nam|1|name!51&47^9#9*387@
+-- END TREE

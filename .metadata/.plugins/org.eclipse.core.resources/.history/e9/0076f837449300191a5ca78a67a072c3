@@ -1,0 +1,10 @@
+# for friend in ["Vivek","V","Viv"]:
+#     invitation="Hi",friend,"Please come to the party"
+#     print(invitation)
+#     
+
+n=input("Enter a number")
+n=int()
+for i in range(n):
+    a=n*(n-1)
+print(a)

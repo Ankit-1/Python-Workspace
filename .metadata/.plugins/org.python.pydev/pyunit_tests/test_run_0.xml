@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pydev-testrun version="1.0"?><pydev-testsuite>
+<summary errors="2" failures="0" finished="true" name="Test Run: 0" tests="0" total_time="Finished in: 0.00 secs."/>
+<test location="C:/Users/TheBOT/Python Workspace/hello/database1/create_connection.py" status="error" test="create_connection" time="0">
+<stdout/>
+<stderr><![CDATA[Traceback (most recent call last):
+  File "C:\Users\TheBOT\Downloads\eclipse-java-2018-12-R-win32-x86_64\eclipse\plugins\org.python.pydev.core_7.2.1.201904261721\pysrc\_pydev_runfiles\pydev_runfiles.py", line 468, in __get_module_from_str
+    mod = __import__(modname)
+  File "C:\Users\TheBOT\Python Workspace\hello\database1\create_connection.py", line 6, in <module>
+    cursor.execute("""INSERT INTO course VALUES ("1120000","Python Programming",5)""")
+sqlite3.OperationalError: no such table: course
+ERROR: Module: create_connection could not be imported (file: C:/Users/TheBOT/Python Workspace/hello/database1/create_connection.py).
+]]></stderr>
+</test>
+<test location="C:/Users/TheBOT/Python Workspace/hello/database1/insert.py" status="error" test="insert" time="0">
+<stdout/>
+<stderr><![CDATA[Traceback (most recent call last):
+  File "C:\Users\TheBOT\Downloads\eclipse-java-2018-12-R-win32-x86_64\eclipse\plugins\org.python.pydev.core_7.2.1.201904261721\pysrc\_pydev_runfiles\pydev_runfiles.py", line 468, in __get_module_from_str
+    mod = __import__(modname)
+  File "C:\Users\TheBOT\Python Workspace\hello\database1\insert.py", line 5, in <module>
+    cursor.execute("INSERT INTO courses VALUES (?,?,?);",courses)
+sqlite3.OperationalError: no such table: courses
+ERROR: Module: insert could not be imported (file: C:/Users/TheBOT/Python Workspace/hello/database1/insert.py).
+]]></stderr>
+</test>
+<launch mode="run">
+<launch_memento><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration local="true" path="hello database1"/>
+]]></launch_memento>
+</launch>
+</pydev-testsuite>

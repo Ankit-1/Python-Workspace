@@ -1,0 +1,12 @@
+from random import *
+
+a=int(random(10,60))
+
+if a>43 || a<60:
+    print("large number")
+elif  a>35 && a<43:
+    print("medium number")
+elif >25 && a<35:
+    print("small number")
+else:
+    print("")

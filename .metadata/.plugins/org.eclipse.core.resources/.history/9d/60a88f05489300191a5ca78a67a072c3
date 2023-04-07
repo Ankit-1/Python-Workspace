@@ -1,0 +1,10 @@
+#while conditon:
+    #statement
+a=input("Enter a number ")
+a=int(a)
+fact=1
+
+while a<=a+1:
+    a=a-1
+    fact=fact*a
+    print(fact)

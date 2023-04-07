@@ -1,0 +1,29 @@
+import mysql.connector
+from mysql.connector import Error
+
+try:
+    connection = mysql.connector.connect(host='localhost',
+                                         database='result',
+                                         user='root',
+                                         password='!NT#L_W!NZ')
+
+    sql_select_Query = "select * from finalcleandata_dec2017sem1"
+    cursor = connection.cursor()
+    cursor.execute(sql_select_Query)
+    records = cursor.fetchall()
+    print("Total number of rows in finalcleandata_dec2017sem1 is: ", cursor.rowcount)
+
+    print("\nPrinting each finalcleandata_dec2017sem1 record")
+    for row in records:
+        print("Name = ", row[0], )
+        print("Enrollment Number = ", row[1])
+        print("20201  = ", row[2])
+        print("20203 date  = ", row[3], "\n")
+
+except Error as e:
+    print("Error reading data from MySQL table", e)
+finally:
+    if (connection.is_connected()):
+        connection.close()
+        cursor.close()
+        print("MySQL connection is closed")

@@ -1,0 +1,47 @@
+import array as arr
+marks=arr.array('i',[50,60,70,80,30,24,66,99])
+
+# marks1 = 50 #4
+# marks2 = 60 #4
+# marks3 = 70 #3
+# marks4 = 80 #4
+# marks5 = 30 #4
+# marks6 = 24 #3
+# marks7 = 66 #3
+# marks8 = 99 #2
+
+def function1(a):
+    if a>=90:
+        g1=a*10
+        return(g1)
+    elif a>=80:
+        g2=a*9
+        return(g2)
+    elif a>=70:
+        g3=a*8
+        return(g3)
+    elif a>=60:
+        g4=a*7
+        return(g4)
+    elif a>=50:
+        g5=a*6
+        return(g5)
+    elif a>40:
+        g6=a*5
+        return(g6)
+    elif a==40:
+        g7=a*4
+        return(g7)
+    else:
+        g8=a*0
+        return (g8)
+    
+    cgpa= (g1+g2+g3+g4+g5+g6+g7+g8)
+    return(cgpa/27)
+
+
+for i in range(0,7):
+    CGPA=function1(marks[i])
+    
+# CGPA=function1()
+print(CGPA)
